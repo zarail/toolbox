@@ -7,6 +7,9 @@ Rails.application.routes.draw do
     resources :bookings, only: [:new, :create, :show]
   end
 
+  get "/dashboard", to: "pages#dashboard"
+
+
   # Defines the root path route ("/")
   # root "articles#index"
 end
@@ -15,5 +18,4 @@ end
 # /tools/:id	                  GET	tools     show
 # /tools/:tool_id/bookings/new	GET	bookings	new
 # /tools/:id/edit               GET	tools	    edit
-# /bookings/new                 GET	bookings	new
-# /bookings/:id                 GET	bookings	show
+# /tools/:tool_id/bookings/:id  GET	bookings	show
