@@ -1,0 +1,9 @@
+<h1>Rent Out Your Tools</h1>
+
+<div>
+  <%= simple_form_for(@tool) do |f| %>
+    <%= f.input :name, required: false %>
+    <%= f.input :price, required: false %>
+    <%= f.submit "Create Tool", class: "btn btn-primary" %>
+  <% end %>
+</div>
