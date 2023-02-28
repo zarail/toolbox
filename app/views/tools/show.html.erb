@@ -1,7 +1,18 @@
-<h1><%= @tools.name%><h1>
-
-<ul><%@tools.each do |tool| %>
-  <li><%= tool.price %></li>
-  <li>offered by:<%=tool.user%></li>
-  <% end %>
-</ul>
+<div class="container">
+  <div class="container-background d-flex mb-4">
+    <h1><%= @tool.name %></h1>
+  </div>
+    <div class="container-background d-flex">
+      <div class="tool-img-container">
+        <img src="https://cdn.pixabay.com/photo/2015/07/28/20/55/tools-864983__480.jpg" class="tool-img">
+      </div>
+      <div class="tool-content">
+        <div class="d-flex justify-content-between w-100">
+          <h2>offered by:<%= @tool.user.email %></h2>
+          <h2><%= @tool.price%>€</h2>
+        </div>
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Tenetur, animi minus. Numquam magni officiis aliquam odio totam vitae consectetur. Fugiat, architecto cumque commodi minima fugit placeat nostrum quaerat earum unde est aliquam, aut quo dolores recusandae dolore, magni odit. Est asperiores provident consequuntur odio dolorum fugit, temporibus quas ab eligendi.</p>
+        <a class="btn btn-flat" href="#">Book now</a>
+      </div>
+    </div>
+</div>
