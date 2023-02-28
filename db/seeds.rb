@@ -19,3 +19,7 @@ end
 5.times do
   Tool.create(name: tools.sample, price: rand(0.7..2.5), user: pat)
 end
+
+puts "Created #{Tool.count} tools"
+
+puts "Done"
