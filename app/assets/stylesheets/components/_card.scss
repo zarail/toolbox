@@ -3,6 +3,9 @@
   grid-template-columns: 1fr 1fr 1fr;
   grid-gap: 16px;
 }
+ul{
+  list-style-type: none;
+}
 
 // Smallest device
 @media (min-width: 100px) and (max-width: 575px) {
