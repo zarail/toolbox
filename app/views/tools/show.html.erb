@@ -1,0 +1,7 @@
+<h1><%= @tools.name%><h1>
+
+<ul><%@tools.each do |tool| %>
+  <li><%= tool.price %></li>
+  <li>offered by:<%=tool.user%></li>
+  <% end %>
+</ul>
