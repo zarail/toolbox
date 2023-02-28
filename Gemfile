@@ -79,3 +79,5 @@ end
 gem 'devise'
 
 gem 'bootstrap'
+
+gem 'cloudinary'
