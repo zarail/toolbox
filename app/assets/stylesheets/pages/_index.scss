@@ -2,11 +2,14 @@
 @import "home";
 @import "tools_show";
 
-h1 {
-  text-align: start;
-  font-size: 42px;
-  font-weight: bold;
-  margin: 0;
-  color: rgb(0, 0, 0);
-  // text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+.tools.index {
+  h1 {
+    font-size: 42px;
+    font-weight: bold;
+    margin: 0;
+    color: rgb(0, 0, 0);
+    text-align: center;
+    margin-top: 50px;
+    margin-bottom: 15px;
+  }
 }
