@@ -1,13 +1,14 @@
 <h1>List of Tools</h1>
 <div class="container">
-
-  <% @tools.each do |tool| %>
-    <div class="card-product">
-      <img src="<%= tool.image_url %>" />
-      <div class="card-product-infos">
-        <h2><%= tool.name %></h2>
-        <p><%= tool.price.round(1) %></p>
+  <div class="cards">
+    <% @tools.each do |tool| %>
+      <div class="card-product">
+        <img src="<%= tool.image_url %>" />
+        <div class="card-product-infos">
+          <h2><%= tool.name %></h2>
+          <p><%= tool.price.round(1) %></p>
+        </div>
       </div>
-    </div>
-  <% end %>
+    <% end %>
+  </div>
 </div>
