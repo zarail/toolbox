@@ -5,8 +5,8 @@
 Tool.destroy_all
 User.destroy_all
 
-pat = User.create(email: "patricia@admin.com", password: "324ha*")
-latif = User.create(email: "latif@admin.com", password: "324us*")
+pat = User.create(email: "patricia@admin.com", password: "324ha*", username: "pat15", firstname: "Patricia", lastname: "Lambertz")
+latif = User.create(email: "latif@admin.com", password: "324us*", username: "latif123", firstname: "Latif", lastname: "Turaan")
 
 # Tools:
 # @tool = Tool.new(name: "Axe", price: 1.2, user_id: 1)
@@ -53,11 +53,12 @@ tools = [
 ]
 
 tools.each do |tool|
-  Tool.create(name: tool[:name], price: rand(0.7..2.5).round(2), user: latif, image_url: tool[:image_url])
+  Tool.create(name: tool[:name], price: rand(0.7..2.5).round(2), user: latif, image_url: tool[:image_url], description: tool[:description])
 end
 
 5.times do
-  Tool.create(name: tools.sample, price: rand(0.7..2.5).round(2), user: pat)
+  tool = tools.sample
+  Tool.create(name: tool[:name], price: rand(0.7..2.5).round(2), user: pat, image_url: tool[:image_url], description: tool[:description])
 end
 
 puts "Created #{Tool.count} tools"
