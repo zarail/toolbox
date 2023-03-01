@@ -14,7 +14,9 @@
     <%# <p class="notice"><%= notice %>
     <%# </p> %>
     <p class="alert"><%= alert %></p>
-    <%= render "shared/navbar" %>
+    <% unless @no_navbar %>
+      <%= render "shared/navbar" %>
+    <% end %>
     <%= yield %>
   </body>
 </html>
