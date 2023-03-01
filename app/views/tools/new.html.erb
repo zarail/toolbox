@@ -1,9 +1,11 @@
-<h1>Rent Out Your Tools</h1>
+<h1>Rent Out Your Tool</h1>
 
 <div>
   <%= simple_form_for(@tool) do |f| %>
     <%= f.input :name, required: false %>
     <%= f.input :price, required: false %>
-    <%= f.submit "Create Tool", class: "btn btn-primary" %>
+    <%= f.input :description, required: false %>
+    <%= f.input :image_url, required: false %>
+    <%= f.submit "Create Tool", class: "btn btn-flat" %>
   <% end %>
 </div>
