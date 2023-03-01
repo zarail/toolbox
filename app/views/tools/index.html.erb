@@ -1,17 +1,20 @@
-
-
-
 <h1>List of Tools</h1>
 <div class="container">
   <div class="card-deck">
-    <% @tools.each do |tool| %>
-      <%= link_to tool_path(tool), class: "card" do %>
-        <img src="<%= tool.image_url %>" class="card-img-top" alt="<%= tool.name %>">
-        <div class="card-body">
-          <h5 class="card-title"><%= tool.name %></h5>
-          <p class="card-text"><%= tool.price.round(1) %></p>
-        </div>
-      <% end %>
+    <% @tools.each_slice(3) do |tool_group| %>
+      <div class="row">
+        <% tool_group.each do |tool| %>
+          <div class="col-md-4">
+            <%= link_to tool_path(tool), class: "card mb-4" do %>
+              <img src="<%= tool.image_url %>" class="card-img-top" alt="<%= tool.name %>">
+              <div class="card-body">
+                <h5 class="card-title"><%= tool.name %></h5>
+                <p class="card-text"><%= tool.price.round(1) %></p>
+              </div>
+            <% end %>
+          </div>
+        <% end %>
+      </div>
     <% end %>
   </div>
 </div>
