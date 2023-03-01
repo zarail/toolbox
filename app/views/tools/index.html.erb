@@ -1,15 +1,16 @@
-
 <h1>List of Tools</h1>
 <div class="container">
-  <div class="card-container">
+  <div class="card">
     <% @tools.each do |tool| %>
-      <%= link_to tool_path(tool), class: "card" do %>
-        <img src="<%= tool.image_url %>" class="card-img-top" alt="<%= tool.name %>">
-        <div class="card-body">
-          <h5 class="card-title"><%= tool.name %></h5>
-          <p class="card-text"><%= tool.price.round(1) %></p>
+      <%= link_to tool_path(tool) do  %>
+        <div class="card-product">
+          <img src="<%= tool.image_url %>" />
+          <div class="card-product-infos">
+            <h2><%= tool.name%></h2>
+            <p><%= tool.price.round(1) %></p>
+          </div>
         </div>
       <% end %>
     <% end %>
-  </div>
+    </div>
 </div>
