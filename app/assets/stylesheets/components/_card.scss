@@ -1,8 +1,11 @@
 .cards {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-gap: 16px;
+  display: flex;
+  margin: 0 auto;
+  // grid-template-columns: 1fr 1fr 1fr;
+  // grid-gap: 16px;
+
 }
+
 ul{
   list-style-type: none;
 }
