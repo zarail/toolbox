@@ -1,0 +1,11 @@
+<h1>List of Tools</h1>
+<div class="container">
+  <ul>
+    <% @tools.each do |tool| %>
+      <div class = "card" style = "background_image:  url(https://www.matillion.com/resources/blog/the-importance-of-etl-tools-in-data-warehousing)">
+        <li><%= tool.name %></li>
+        <li><%= tool.price.round(1) %></li>
+      </div>
+    <% end %>
+  </ul>
+</div>
