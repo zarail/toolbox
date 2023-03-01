@@ -53,11 +53,11 @@ tools = [
 ]
 
 tools.each do |tool|
-  Tool.create(name: tool.name, price: rand(0.7..2.5), user: latif, image_url: tool.image_url)
+  Tool.create(name: tool.name, price: rand(0.7..2.5).round(2), user: latif, image_url: tool.image_url)
 end
 
 5.times do
-  Tool.create(name: tools.sample, price: rand(0.7..2.5), user: pat)
+  Tool.create(name: tools.sample, price: rand(0.7..2.5).round(2), user: pat)
 end
 
 puts "Created #{Tool.count} tools"
