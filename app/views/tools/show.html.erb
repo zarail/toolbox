@@ -12,7 +12,7 @@
             <img class="avatar-bordered" alt="avatar-bordered" src="https://media.istockphoto.com/id/1337144146/de/vektor/standard-avatar-profilsymbolvektor.jpg?s=170667a&w=0&k=20&c=P_OBjasv808q0FKQky9KwCnApsblnOd_gOaQfnzwLnE=">
             <h2><%= @tool.user.firstname %></h2>
           </div>
-          <h2><%= number_to_currency(@tool.price, unit: "€", separator: ",")%></h2>
+          <h2><%= number_to_currency(@tool.price, unit: "€", separator: ",") %></h2>
         </div>
         <p><%= @tool.description %></p>
         <a class="btn btn-flat" href="#">Book now</a>
