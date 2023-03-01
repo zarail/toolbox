@@ -1,5 +1,8 @@
 class ToolsController < ApplicationController
 
+  def show
+    @tool = Tool.find(params[:id])
+    
   def index
     @tools = Tool.all
   end
@@ -24,5 +27,6 @@ class ToolsController < ApplicationController
 
   def tool_params
     params.require(:tool).permit(:name, :price)
+
   end
 end

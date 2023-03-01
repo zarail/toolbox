@@ -1,0 +1,38 @@
+.container-background {
+  background-color: white;
+  border-radius: 4px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  padding: 50px 120px;
+  gap: 40px;
+}
+
+.tool-img-container {
+  flex-shrink: 0;
+  width: 350px;
+}
+
+.tool-img {
+  width: 100%;
+}
+
+.tool-content {
+  flex-grow: 1;
+  justify-content: space-evenly;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.btn-flat {
+  width: fit-content;
+  color: white;
+  padding: 8px 24px;
+  border-radius: 4px;
+  background: #670BFF;
+  transition: background 0.3s ease;
+}
+
+.btn-flat:hover {
+  background: #4D04C4;
+  color: white;
+}

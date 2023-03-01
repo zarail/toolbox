@@ -13,9 +13,9 @@ latif = User.create(email: "latif@admin.com", password: "324us*")
 tools = ["Axe", "Hammer", "Drill", "Clamps", "Caulk Gun", "Saw", "Ladder", "Pliers", "Screwdriver Set", "Shovel"]
 
 tools.each do |tool|
-  Tool.create(name: tool, price: rand(0.7..2.5), user: latif)
+  Tool.create(name: tool, price: rand(0.7..2.5).round(2), user: latif)
 end
 
 5.times do
-  Tool.create(name: tools.sample, price: rand(0.7..2.5), user: pat)
+  Tool.create(name: tools.sample, price: rand(0.7..2.5).round(2), user: pat)
 end
