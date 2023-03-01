@@ -68,8 +68,19 @@
   height: 100%;
 }
 
+.card-img-top {
+  height: 200px;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
 @media (max-width: 991.98px) {
   .card {
     max-width: 100%;
+  }
+
+  .card-img-top {
+    height: 150px;
   }
 }
