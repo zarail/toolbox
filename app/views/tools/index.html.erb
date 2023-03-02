@@ -9,8 +9,14 @@
         class: "form-control",
         placeholder: "Find a tool"
       %>
-      <%= submit_tag "Search", class: "btn btn-primary" %>
+      <%= submit_tag "Search", class: "btn btn-flat" %>
     <% end %>
+
+        <% if flash.now[:notice].present? %>
+        <div class="alert alert-info mt-3">
+          <%= flash.now[:notice] %>
+        </div>
+      <% end %>
   </div>
 
   <div class="row">

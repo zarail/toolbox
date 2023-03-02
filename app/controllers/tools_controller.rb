@@ -9,7 +9,7 @@ class ToolsController < ApplicationController
     if params[:query].present?
       @tools = Tool.search_name_city_description(params[:query])
       if @tools.empty?
-        flash.now[:notice] = "No results found for '#{params[:query]}'"
+        flash.now[:notice] = "No results found for '#{params[:query]}'. please check your input!"
       end
     else
       @tools = Tool.all
