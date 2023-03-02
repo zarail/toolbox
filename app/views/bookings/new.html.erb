@@ -1,0 +1,9 @@
+<h1>Book <%= @tool.name %> </h1>
+
+<div>
+  <%= simple_form_for [@tool, @booking], data: { controller: 'flatpickr' } do |f| %>
+    <%= f.input :start_date, as: :string, input_html: { data: { flatpickr_target: "startTime" } } %>
+    <%= f.input :end_date, as: :string, input_html: { data: { flatpickr_target: "endTime" } } %>
+    <%= f.submit "Book!", class: "btn btn-flat" %>
+  <% end %>
+</div>

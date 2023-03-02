@@ -18,3 +18,10 @@ end
 # /tools/:tool_id/bookings/new	GET	bookings	new
 # /tools/:id/edit               GET	tools	    edit
 # /tools/:tool_id/bookings/:id  GET	bookings	show
+
+# tool_bookings POST   /tools/:tool_id/bookings(.:format)
+# bookings#create
+# new_tool_booking GET    /tools/:tool_id/bookings/new(.:format)
+# bookings#new
+#    tool_booking GET    /tools/:tool_id/bookings/:id(.:format)
+# bookings#show
