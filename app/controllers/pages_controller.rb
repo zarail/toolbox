@@ -5,7 +5,9 @@ class PagesController < ApplicationController
   end
 
   def dashboard
-    # @sent_bookings = current_user.bookings
-    # @tools = current_user.tools
+    @bookings = current_user.bookings
+    # @lent_tools =
+    @tools = current_user.tools
+    @received_bookings = @tools.map { |tool| tool.bookings }.flatten
   end
 end

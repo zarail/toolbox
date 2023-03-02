@@ -1,0 +1,11 @@
+<div class="container">
+  <h1 class="text-center my-5">Book <%= @tool.name %> </h1>
+
+  <div>
+    <%= simple_form_for [@tool, @booking], data: { controller: 'flatpickr', 'flatpickr-booked-value': @tool.booked_dates.to_json } do |f| %>
+      <%= f.input :start_date, required: false, as: :string, input_html: { data: { flatpickr_target: "startTime" } } %>
+      <%= f.input :end_date, required: false, as: :string, input_html: { data: { flatpickr_target: "endTime" } } %>
+      <%= f.submit "Book!", class: "btn btn-flat" %>
+    <% end %>
+  </div>
+</div>

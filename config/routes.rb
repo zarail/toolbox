@@ -4,8 +4,7 @@ Rails.application.routes.draw do
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 
   resources :tools do
-    resources :bookings, only: %i[new create show]
-
+    resources :bookings, only: %i[new create]
   end
 
   get "/dashboard", to: "pages#dashboard"
@@ -18,3 +17,10 @@ end
 # /tools/:tool_id/bookings/new	GET	bookings	new
 # /tools/:id/edit               GET	tools	    edit
 # /tools/:tool_id/bookings/:id  GET	bookings	show
+
+# tool_bookings POST   /tools/:tool_id/bookings(.:format)
+# bookings#create
+# new_tool_booking GET    /tools/:tool_id/bookings/new(.:format)
+# bookings#new
+#    tool_booking GET    /tools/:tool_id/bookings/:id(.:format)
+# bookings#show

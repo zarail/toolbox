@@ -15,7 +15,7 @@
           <h2><%= number_to_currency(@tool.price, unit: "€", separator: ",") %></h2>
         </div>
         <p><%= @tool.description %></p>
-        <a class="btn btn-flat" onclick="alert('Thank you for booking. Please check your email!')">Book now</a>
+        <%= link_to "Book now", new_tool_booking_path(@tool), class:"btn btn-flat" %>
       </div>
     </div>
 </div>

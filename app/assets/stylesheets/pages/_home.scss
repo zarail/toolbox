@@ -3,7 +3,6 @@
   background-size: cover;
   background-position: center;
   padding: 295px 0;
-  line-height: 2.5;
 }
 
 .banner h1 {
@@ -13,6 +12,7 @@
   margin: 0;
   color: white;
   text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+  line-height: 2;
 }
 
 .banner p {
@@ -21,6 +21,7 @@
   font-weight: bold;
   color: white;
   text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+  line-height: 2;
 }
 
 .btn-ghost {

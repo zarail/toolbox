@@ -12,7 +12,8 @@
       <ul class="navbar-nav me-auto">
         <%# if user_signed_in? %>
           <li class="nav-item active">
-            <%= link_to "Home", "/", class: "nav-link" %>
+            <%= link_to "Profile", "/dashboard", class: "nav-link" %>
+
           </li>
           <li class="nav-item dropdown">
             <%= image_tag "https://media.istockphoto.com/id/1337144146/de/vektor/standard-avatar-profilsymbolvektor.jpg?s=170667a&w=0&k=20&c=P_OBjasv808q0FKQky9KwCnApsblnOd_gOaQfnzwLnE=", class: "avatar dropdown-toggle", id: "navbarDropdown", data: { bs_toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
