@@ -14,6 +14,8 @@ export default class extends Controller {
       disable: this.bookedValue.map((date) => Date.parse(date)),
     })
 
-    flatpickr(this.endTimeTarget, {})
+    flatpickr(this.endTimeTarget, {
+      disable: this.bookedValue.map((date) => Date.parse(date)),
+    })
   }
 }
