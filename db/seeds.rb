@@ -1,12 +1,34 @@
 # This file should contain all the record creation needed to seed the database with its default values.
 # The data can then be loaded with the bin/rails db:seed command (or created alongside the database with db:setup).
 #
+
 # Users:
 Tool.destroy_all
 User.destroy_all
 
-pat = User.create(email: "patricia@admin.com", password: "324ha*", username: "pat15", firstname: "Patricia", lastname: "Lambertz")
-latif = User.create(email: "latif@admin.com", password: "324us*", username: "latif123", firstname: "Latif", lastname: "Turaan")
+pat = User.create(
+  email: "patricia@admin.com",
+  password: "324ha*",
+  username: "pat15",
+  firstname: "Patricia",
+  lastname: "Lambertz"
+)
+
+latif = User.create(
+  email: "latif@admin.com",
+  password: "324us*",
+  username: "latif123",
+  firstname: "Latif",
+  lastname: "Turaan"
+)
+
+zara = User.create(
+  email: "zara@admin.com",
+  password: "123*zi",
+  username: "zara91",
+  firstname: "Zahra",
+  lastname: "Ilkhan"
+)
 
 # Tools:
 # @tool = Tool.new(name: "Axe", price: 1.2, user_id: 1)
