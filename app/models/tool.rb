@@ -4,4 +4,11 @@ class Tool < ApplicationRecord
 
   validates :name, :price, presence: true
   validates :price, numericality: true
+
+  include PgSearch::Model
+  pg_search_scope :search_name_city_description,
+    against: [ :name, :city, :description ],
+    using: {
+      tsearch: { prefix: true }
+    }
 end

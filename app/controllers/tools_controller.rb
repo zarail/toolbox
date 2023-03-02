@@ -6,7 +6,14 @@ class ToolsController < ApplicationController
   end
 
   def index
-    @tools = Tool.all
+    if params[:query].present?
+      @tools = Tool.search_name_city_description(params[:query])
+      if @tools.empty?
+        flash.now[:notice] = "No results found for '#{params[:query]}'"
+      end
+    else
+      @tools = Tool.all
+    end
   end
 
   def new
@@ -29,6 +36,5 @@ class ToolsController < ApplicationController
 
   def tool_params
     params.require(:tool).permit(:name, :price, :image_url, :description)
-
   end
 end

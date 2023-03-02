@@ -2,6 +2,17 @@
 <div class="container">
   <%= link_to "Add your tool", new_tool_path, class: "btn btn-flat my-4" %>
 
+  <div class="search">
+      <%= form_with url: tools_path, method: :get, class: "d-flex" do %>
+      <%= text_field_tag :query,
+        params[:query],
+        class: "form-control",
+        placeholder: "Find a tool"
+      %>
+      <%= submit_tag "Search", class: "btn btn-primary" %>
+    <% end %>
+  </div>
+
   <div class="row">
     <% @tools.each do |tool| %>
       <div class="col-lg-4 col-md-6 col-sm-12 mb-4">
