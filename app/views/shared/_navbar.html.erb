@@ -10,24 +10,26 @@
 
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav me-auto">
-        <%# if user_signed_in? %>
-          <li class="nav-item active">
-            <%= link_to "Profile", "/dashboard", class: "nav-link" %>
 
+          <li class="nav-item active">
+            <%= link_to "Rent your tool out", "/tools/new", class: "nav-link" %>
           </li>
+
+          <li class="nav-item active">
+            <%= link_to "Dashboard", "/dashboard", class: "nav-link" %>
+          </li>
+
           <li class="nav-item dropdown">
             <%= image_tag "https://media.istockphoto.com/id/1337144146/de/vektor/standard-avatar-profilsymbolvektor.jpg?s=170667a&w=0&k=20&c=P_OBjasv808q0FKQky9KwCnApsblnOd_gOaQfnzwLnE=", class: "avatar dropdown-toggle", id: "navbarDropdown", data: { bs_toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
             <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
+              <%= link_to "Your profile", new_user_session_path, class: "dropdown-item" %>
+              <%= link_to "Your dashboard", dashboard_path, class: "dropdown-item" %>
               <%= link_to "Login", new_user_session_path, class: "dropdown-item" %>
               <%= link_to "Sign up", new_user_registration_path, class: "dropdown-item" %>
+              <div class="dropdown-divider"></div>
               <%= link_to "Log out", destroy_user_session_path, class: "dropdown-item", data: {turbo_method: :delete} %>
             </div>
           </li>
-        <%# else %>
-          <!--li class="nav-item"-->
-            <%#= link_to "Login", new_user_session_path, class: "nav-link" %>
-          <!--/li-->
-        <%# end %>
       </ul>
     </div>
   </div>
