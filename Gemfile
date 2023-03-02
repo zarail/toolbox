@@ -45,6 +45,8 @@ gem "bootsnap", require: false
 # gem pg search
 gem "pg_search"
 
+
+
 # Use Sass to process CSS
 gem "sassc-rails"
 

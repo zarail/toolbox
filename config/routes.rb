@@ -5,10 +5,10 @@ Rails.application.routes.draw do
 
   resources :tools do
     resources :bookings, only: %i[new create show]
+
   end
 
   get "/dashboard", to: "pages#dashboard"
-
   # Defines the root path route ("/")
   # root "articles#index"
 end
