@@ -6,6 +6,10 @@
       <%= f.input :start_date, required: false, as: :string, input_html: { data: { flatpickr_target: "startTime" } } %>
       <%= f.input :end_date, required: false, as: :string, input_html: { data: { flatpickr_target: "endTime" } } %>
       <%= f.submit "Book!", class: "btn btn-flat" %>
+
+      <p>Your Total Earning is: <%= number_to_currency(@total_earnings) %></p>
+      <p>Your Total Payment is: <%= number_to_currency(@total_payments) %></p>
+
     <% end %>
   </div>
 </div>

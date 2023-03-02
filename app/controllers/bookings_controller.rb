@@ -15,6 +15,13 @@ class BookingsController < ApplicationController
     else
       render :new
     end
+
+    def show
+      @booking = Booking.find(params[:id])
+      total_earnings = @booking.total_earnings
+      total_payments = @booking.total_payments
+    end
+
   end
 
   private
