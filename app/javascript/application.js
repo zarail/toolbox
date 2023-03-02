@@ -2,7 +2,5 @@
 import "@hotwired/turbo-rails"
 import "./controllers"
 import "bootstrap"
-import "import { Controller } from stimulus"
 
-
-import { Controller } from "stimulus";
+// import { Controller } from "stimulus";
