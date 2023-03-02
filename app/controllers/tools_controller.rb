@@ -6,7 +6,19 @@ class ToolsController < ApplicationController
   end
 
   def index
-    @tools = Tool.all
+    if params[:query].present?
+      @tools = Tool.search_name_city_description(params[:query])
+      if @tools.empty?
+        flash.now[:notice] = "No results found for '#{params[:query]}'. please check your input!"
+      end
+    else
+      @tools = Tool.all
+    end
+  end
+
+  def autocomplete
+    tools = Tool.select(:name).map(&:name)
+    render json: tools
   end
 
   def new
@@ -29,6 +41,5 @@ class ToolsController < ApplicationController
 
   def tool_params
     params.require(:tool).permit(:name, :price, :image_url, :description)
-
   end
 end
