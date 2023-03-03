@@ -16,7 +16,7 @@
             <p><strong>Until:</strong><%= booking.end_date.strftime("%a, %e %b %Y") %></p>
           </div>
         </div>
-        <p class="pricetag">Price in total: <strong><%= booking.tool.price * (booking.end_date - booking.start_date).to_i %>€</strong></p>
+        <p class="pricetag">Price in total: <strong><%= booking.tool.price * (booking.end_date - booking.start_date).to_i.round(2) %>€</strong></p>
       </div>
     </div>
   <% end %>
