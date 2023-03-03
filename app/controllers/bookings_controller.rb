@@ -10,17 +10,16 @@ class BookingsController < ApplicationController
     @booking.user = current_user
     @booking.tool = @tool # the one we set in the private method below
     if @booking.save
-      redirect_to tools_path
-      # flash.now[:success] = "The Tool has been created"
+      redirect_to tool_booking_path(@tool, @booking)
     else
       render :new
     end
+  end
 
-    def show
-      @booking = Booking.find(params[:id])
-      total_earnings = @booking.total_earnings
-      total_payments = @booking.total_payments
-    end
+  def show
+    @booking = Booking.find(params[:id])
+    @total_payments = @booking.total_payments
+    @image_url = @booking.tool.image_url
   end
 
   private
