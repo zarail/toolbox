@@ -10,4 +10,9 @@ class PagesController < ApplicationController
     @tools = current_user.tools
     @received_bookings = @tools.map { |tool| tool.bookings }.flatten
   end
+
+  def profile
+    @user = current_user
+
+  end
 end
