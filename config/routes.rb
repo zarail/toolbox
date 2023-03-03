@@ -8,6 +8,7 @@ Rails.application.routes.draw do
   end
 
   get "/dashboard", to: "pages#dashboard"
+  get "/profile", to: "pages#profile" # profile_path
   # Defines the root path route ("/")
   # root "articles#index"
 end
