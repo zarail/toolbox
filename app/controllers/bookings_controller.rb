@@ -21,7 +21,6 @@ class BookingsController < ApplicationController
       total_earnings = @booking.total_earnings
       total_payments = @booking.total_payments
     end
-
   end
 
   private
