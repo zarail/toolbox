@@ -5,11 +5,8 @@
     <%= simple_form_for [@tool, @booking], data: { controller: 'flatpickr', 'flatpickr-booked-value': @tool.booked_dates.to_json } do |f| %>
       <%= f.input :start_date, required: false, as: :string, input_html: { data: { flatpickr_target: "startTime" } } %>
       <%= f.input :end_date, required: false, as: :string, input_html: { data: { flatpickr_target: "endTime" } } %>
+      <div class="mb-3">Price per day: <%= number_to_currency(@tool.price, unit: "€", separator: ",") %></div>
       <%= f.submit "Book!", class: "btn btn-flat" %>
-
-      <p>Your Total Earning is: <%= number_to_currency(@total_earnings) %></p>
-      <p>Your Total Payment is: <%= number_to_currency(@total_payments) %></p>
-
     <% end %>
   </div>
 </div>

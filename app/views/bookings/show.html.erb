@@ -1,0 +1,14 @@
+
+
+
+<div class="container">
+  <div class="card">
+    <h5 class="card-header">Booking Details</h5>
+    <div class="card-body">
+      <h5 class="card-title">Total Payment:</h5>
+      <p class="card-text"><%= @total_payments %></p>
+      <%= image_tag @image_url, class: "img-fluid" %>
+      <%= link_to 'Go To Dashboard', dashboard_path, class: "btn btn-flat" %>
+    </div>
+  </div>
+</div>
