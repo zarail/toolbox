@@ -1,14 +1,14 @@
 <div class="container">
-  <div class="card">
-    <div class="text mx-3 my-5">
-          <h3 class="card-text"><strong>Thanks for booking the <%= @booking.tool.name %></strong></h3>
-          <div class="d-flex justify-content-center">
-            <p class="card-title">Your Total Payment is: <%= @total_payments %></p>
-          </div>
-    <div class="card-body d-flex flex-column justify-between align-items-center">
-      <%= image_tag @image_url, class: "img-fluid mb-3", style: "width: 300px; height: 300px;" %>
+  <div class="booking-card">
+    <div class="booking-text mx-3 my-5">
+      <h3 class="card-text my-4 pt-4"><strong>Thanks for booking the <%= @booking.tool.name %></strong></h3>
+      <div class="d-flex justify-content-center">
+        <p class="card-title my-4">Your Total Payment is: <%= @total_payments %>€</p>
+      </div>
+      <div class="card-body d-flex flex-column justify-between align-items-center">
+        <%= image_tag @image_url, class: "img-fluid mb-3", style: "width: 300px; height: 300px;" %>
 
-        <div class="d-flex justify-content-center mt-3">
+        <div class="d-flex justify-content-center my-3">
           <%= link_to 'Go To Dashboard', dashboard_path, class: "btn btn-flat" %>
         </div>
       </div>
