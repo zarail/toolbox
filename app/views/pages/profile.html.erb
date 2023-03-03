@@ -1,26 +1,57 @@
-<div class="container">
-  <h1>Your Profile</h1>
-
-  <h2>Upcoming Bookings</h2>
-  <% @bookings.each do |booking| %>
-    <div class="card p-4 my-3">
-      <p>You've booked a <%= booking.tool.name %> from <%= booking.tool.user.firstname %></p>
-      <%= booking.start_date %>
-      <%= booking.end_date %>
-    </div>
-  <% end %>
-
-  <h2>Your tools</h2>
-  <% @tools.each do |tool| %>
-    <%= tool.name %>
-  <% end %>
-
-  <h2>Who booked your tools?</h2>
-  <% @received_bookings.each do |booking| %>
-    <div class="card p-4 my-3">
-      <p><%= booking.user.firstname %> booked a <%= booking.tool.name %> from you!</p>
-      <%= booking.start_date %>
-      <%= booking.end_date %>
-    </div>
-  <% end %>
+<div class="container my-4 py-4">
+  <div class="container-background">
+    <h1>Your Profile</h1>
+    <div class="col-lg-8">
+      <div class="card mb-4">
+        <div class="card-body">
+          <div class="row">
+            <div class="col-sm-3">
+              <p class="mb-0">Username</p>
+            </div>
+            <div class="col-sm-9">
+              <p class="text-muted mb-0"><%= @user.username %></p>
+            </div>
+          </div>
+          <hr>
+          <div class="row">
+            <div class="col-sm-3">
+              <p class="mb-0">Email</p>
+            </div>
+            <div class="col-sm-9">
+              <p class="text-muted mb-0"><%= @user.email %></p>
+            </div>
+          </div>
+          <hr>
+          <div class="row">
+            <div class="col-sm-3">
+              <p class="mb-0">Full Name</p>
+            </div>
+            <div class="col-sm-9">
+              <p class="text-muted mb-0"><%= @user.firstname %> <%= @user.lastname %></p>
+            </div>
+          </div>
+          <hr>
+          <div class="row">
+            <div class="col-sm-3">
+              <p class="mb-0">Mobile</p>
+            </div>
+            <div class="col-sm-9">
+              <p class="text-muted mb-0">(098) 765-4321</p>
+            </div>
+          </div>
+          <hr>
+          <div class="row">
+            <div class="col-sm-3">
+              <p class="mb-0">Tools:</p>
+            </div>
+            <div class="col-sm-9">
+              <p class="text-muted mb-0">
+                <% @user.tools.each do |tool| %>
+                  <%= tool.name %>
+                <% end %>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
 </div>
