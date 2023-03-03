@@ -12,7 +12,7 @@
       <ul class="navbar-nav me-auto">
 
           <li class="nav-item active">
-            <%= link_to "Rent Your Tool Out!", "/tools/new", class: "nav-link link-danger" %>
+            <%= link_to "Rent Your Tool Out!", "/tools/new", class: "nav-link" %>
           </li>
 
           <li class="nav-item active">
@@ -25,9 +25,9 @@
               <%= link_to "Your Profile", profile_path, class: "dropdown-item" %>
               <%= link_to "Your Dashboard", dashboard_path, class: "dropdown-item" %>
               <%= link_to "Login", new_user_session_path, class: "dropdown-item" %>
-              <%= link_to "Sign Up", new_user_registration_path, class: "dropdown-item" %>
+              <%= link_to "Sign up", new_user_registration_path, class: "dropdown-item" %>
               <div class="dropdown-divider"></div>
-              <%= link_to "Log Out", destroy_user_session_path, class: "dropdown-item", data: {turbo_method: :delete} %>
+              <%= link_to "Log out", destroy_user_session_path, class: "dropdown-item", data: {turbo_method: :delete} %>
             </div>
           </li>
       </ul>

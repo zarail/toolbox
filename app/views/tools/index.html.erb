@@ -5,7 +5,7 @@
       <%= form_with url: tools_path, method: :get, class: "d-flex" do %>
       <%= text_field_tag :query,
         params[:query],
-        class: "form-control",
+        class: "form-control me-3",
         placeholder: "Find a tool"
       %>
       <%= submit_tag "Search", class: "btn btn-flat" %>
@@ -25,7 +25,7 @@
           <img src="<%= tool.image_url %>" class="card-img-top" alt="<%= tool.name %>">
           <div class="card-body d-flex justify-content-between">
             <h5 class="card-title"><%= tool.name %></h5>
-              <h5 class="card-title"><%= tool.city %></h5>
+            <h5 class="card-title"><%= tool.city %></h5>
             <p class="card-text"><%= number_to_currency(tool.price, unit: "€", separator: ",") %></p>
           </div>
         <% end %>
