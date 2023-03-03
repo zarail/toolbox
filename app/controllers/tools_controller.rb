@@ -16,11 +16,6 @@ class ToolsController < ApplicationController
     end
   end
 
-  def autocomplete
-    tools = Tool.select(:name).map(&:name)
-    render json: tools
-  end
-
   def new
     @tool = Tool.new
   end

@@ -4,10 +4,11 @@ Rails.application.routes.draw do
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 
   resources :tools do
-    resources :bookings, only: %i[new create]
+    resources :bookings, only: %i[new create show]
   end
 
   get "/dashboard", to: "pages#dashboard"
+  get "/profile", to: "pages#profile" # profile_path
   # Defines the root path route ("/")
   # root "articles#index"
 end

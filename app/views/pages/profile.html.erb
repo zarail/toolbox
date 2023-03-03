@@ -1,0 +1,26 @@
+<div class="container">
+  <h1>Your Profile</h1>
+
+  <h2>Upcoming Bookings</h2>
+  <% @bookings.each do |booking| %>
+    <div class="card p-4 my-3">
+      <p>You've booked a <%= booking.tool.name %> from <%= booking.tool.user.firstname %></p>
+      <%= booking.start_date %>
+      <%= booking.end_date %>
+    </div>
+  <% end %>
+
+  <h2>Your tools</h2>
+  <% @tools.each do |tool| %>
+    <%= tool.name %>
+  <% end %>
+
+  <h2>Who booked your tools?</h2>
+  <% @received_bookings.each do |booking| %>
+    <div class="card p-4 my-3">
+      <p><%= booking.user.firstname %> booked a <%= booking.tool.name %> from you!</p>
+      <%= booking.start_date %>
+      <%= booking.end_date %>
+    </div>
+  <% end %>
+</div>

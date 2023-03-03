@@ -7,11 +7,11 @@ class Booking < ApplicationRecord
 
   def total_earnings
     rental_days = (end_date - start_date).to_i
-    rental_days * price
+    rental_days * tool.price
   end
 
   def total_payments
     rental_days = (end_date - start_date).to_i
-    rental_days * price
+    rental_days * tool.price
   end
 end
